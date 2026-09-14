@@ -1,0 +1,164 @@
+# Version catalog for CallerInfo
+# Centralizes all dependency versions, libraries, and plugin versions.
+
+[versions]
+# ---- Build plugins ----
+agp = "9.3.2"
+kotlin = "2.2.10"
+googleServices = "4.4.2"
+
+# ---- SDK / App metadata ----
+compileSdk = "35"
+targetSdk = "35"
+minSdk = "29"
+pluginId = "com.github.soinlee.callassistant.plugin"
+pluginVersionName = "1.1.8"
+pluginVersionCode = "12"
+
+# ---- AndroidX (app primary versions) ----
+coreKtx = "1.15.0"
+appcompat = "1.7.0"
+annotation = "1.7.0"
+cardview = "1.0.0"
+constraintlayout = "2.1.4"
+browser = "1.7.0"
+work = "2.9.1"
+multidex = "2.0.1"
+legacySupportV4 = "1.0.0"
+material = "1.12.0"
+coroutines = "1.10.1"
+activity = "1.9.3"
+lifecycle = "2.8.7"
+
+# ---- Google / third-party (app) ----
+guava = "33.4.0-android"
+flexbox = "3.0.0"
+circleImageView = "3.1.0"
+dagger = "2.55"
+firebase = "21.6.1"
+bugly = "3.1.0"
+materialDialog = "0.9.6.0"
+requery = "1.5.1"
+jsr305annotations = "1.3.2"
+appauth = "0.11.1"
+stetho = "1.6.0"
+apmemLayouts = "1.10"
+
+# ---- Testing (app) ----
+junit = "4.13.2"
+mockito = "4.11.0"
+extJunit = "1.2.1"
+uiautomator = "2.3.0"
+testRules = "1.5.0"
+espresso = "3.6.1"
+hamcrest = "2.2"
+truth = "1.0.1"
+
+# ---- phone-number / config module versions ----
+gson = "2.8.6"
+libphonenumber = "8.12.0"
+geocoder = "2.136"
+carrier = "1.126"
+rxjava = "2.2.11"
+rxandroid = "2.1.1"
+minio = "6.0.13"
+# reference only (top-level ext) that app does not consume directly
+gsonReference = "2.10.1"
+
+# ---- module specific test/legacy versions ----
+junitModule = "4.13"
+mockitoModule = "2.28.2"
+extJunitModule = "1.1.1"
+uiautomatorModule = "2.2.0"
+testRulesModule = "1.2.0"
+espressoModule = "3.2.0"
+annotationModule = "1.1.0"
+truthLibrary = "1.0.1"
+testRunner = "1.2.0"
+extTruth = "1.2.0"
+hamcrestLibrary = "2.2"
+
+# ---- plugin module legacy versions ----
+junitPlugin = "4.12"
+appcompatPlugin = "1.0.0"
+constraintlayoutPlugin = "1.1.3"
+
+[libraries]
+# ---- Kotlin ----
+kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlin" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+
+# ---- AndroidX core ----
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-appcompat-plugin = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompatPlugin" }
+androidx-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
+androidx-annotation-module = { group = "androidx.annotation", name = "annotation", version.ref = "annotationModule" }
+androidx-cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardview" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-constraintlayout-plugin = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayoutPlugin" }
+androidx-browser = { group = "androidx.browser", name = "browser", version.ref = "browser" }
+androidx-work-runtime-ktx = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "work" }
+androidx-multidex = { group = "androidx.multidex", name = "multidex", version.ref = "multidex" }
+androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
+androidx-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity" }
+androidx-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "lifecycle" }
+androidx-lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata", version.ref = "lifecycle" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+
+# ---- Google / third-party ----
+google-guava = { group = "com.google.guava", name = "guava", version.ref = "guava" }
+google-flexbox = { group = "com.google.android.flexbox", name = "flexbox", version.ref = "flexbox" }
+circleimageview = { group = "de.hdodenhof", name = "circleimageview", version.ref = "circleImageView" }
+dagger = { group = "com.google.dagger", name = "dagger", version.ref = "dagger" }
+dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "dagger" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebase" }
+bugly-crashreport = { group = "com.tencent.bugly", name = "crashreport", version.ref = "bugly" }
+material-dialogs-core = { group = "com.afollestad.material-dialogs", name = "core", version.ref = "materialDialog" }
+requery = { group = "io.requery", name = "requery", version.ref = "requery" }
+requery-android = { group = "io.requery", name = "requery-android", version.ref = "requery" }
+requery-processor = { group = "io.requery", name = "requery-processor", version.ref = "requery" }
+jsr305-generated = { group = "javax.annotation", name = "javax.annotation-api", version.ref = "jsr305annotations" }
+appauth = { group = "net.openid", name = "appauth", version.ref = "appauth" }
+stetho = { group = "com.facebook.stetho", name = "stetho", version.ref = "stetho" }
+apmem-layouts = { group = "org.apmem.tools", name = "layouts", version.ref = "apmemLayouts" }
+
+# ---- phone-number / config ----
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+libphonenumber = { group = "com.googlecode.libphonenumber", name = "libphonenumber", version.ref = "libphonenumber" }
+geocoder = { group = "com.googlecode.libphonenumber", name = "geocoder", version.ref = "geocoder" }
+carrier = { group = "com.googlecode.libphonenumber", name = "carrier", version.ref = "carrier" }
+rxjava = { group = "io.reactivex.rxjava2", name = "rxjava", version.ref = "rxjava" }
+rxandroid = { group = "io.reactivex.rxjava2", name = "rxandroid", version.ref = "rxandroid" }
+minio = { group = "io.minio", name = "minio", version.ref = "minio" }
+
+# ---- Testing ----
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+junit-module = { group = "junit", name = "junit", version.ref = "junitModule" }
+junit-plugin = { group = "junit", name = "junit", version.ref = "junitPlugin" }
+mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
+mockito-core-module = { group = "org.mockito", name = "mockito-core", version.ref = "mockitoModule" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "extJunit" }
+androidx-test-ext-junit-module = { group = "androidx.test.ext", name = "junit", version.ref = "extJunitModule" }
+androidx-test-uiautomator = { group = "androidx.test.uiautomator", name = "uiautomator", version.ref = "uiautomator" }
+androidx-test-uiautomator-module = { group = "androidx.test.uiautomator", name = "uiautomator", version.ref = "uiautomatorModule" }
+androidx-test-rules = { group = "androidx.test", name = "rules", version.ref = "testRules" }
+androidx-test-rules-module = { group = "androidx.test", name = "rules", version.ref = "testRulesModule" }
+androidx-test-runner = { group = "androidx.test", name = "runner", version.ref = "testRunner" }
+androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+androidx-test-espresso-core-module = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoModule" }
+androidx-test-espresso-intents = { group = "androidx.test.espresso", name = "espresso-intents", version.ref = "espresso" }
+androidx-test-espresso-idling-resource = { group = "androidx.test.espresso", name = "espresso-idling-resource", version.ref = "espresso" }
+androidx-test-espresso-contrib = { group = "androidx.test.espresso", name = "espresso-contrib", version.ref = "espresso" }
+hamcrest-integration = { group = "org.hamcrest", name = "hamcrest", version.ref = "hamcrest" }
+hamcrest-library = { group = "org.hamcrest", name = "hamcrest-library", version.ref = "hamcrestLibrary" }
+truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
+androidx-test-ext-truth = { group = "androidx.test.ext", name = "truth", version.ref = "extTruth" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }

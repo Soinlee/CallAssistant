@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="default_rainbow">
+        <item>@color/cp_tomato</item>
+        <item>@color/cp_tangerine</item>
+        <item>@color/cp_banana</item>
+        <item>@color/cp_basil</item>
+        <item>@color/cp_sage</item>
+        <item>@color/cp_peacock</item>
+        <item>@color/cp_blueberry</item>
+        <item>@color/cp_lavender</item>
+        <item>@color/cp_grape</item>
+        <item>@color/cp_flamingo</item>
+        <item>@color/cp_graphite</item>
+    </array>
+    <string-array name="default_rainbow_name">
+        <item>@string/cp_tomato</item>
+        <item>@string/cp_tangerine</item>
+        <item>@string/cp_banana</item>
+        <item>@string/cp_basil</item>
+        <item>@string/cp_sage</item>
+        <item>@string/cp_peacock</item>
+        <item>@string/cp_blueberry</item>
+        <item>@string/cp_lavender</item>
+        <item>@string/cp_grape</item>
+        <item>@string/cp_flamingo</item>
+        <item>@string/cp_graphite</item>
+    </string-array>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ColorPreference">
+        <attr name="dialogTitle" format="string|reference" />
+        <attr name="colors" format="reference" />
+        <attr name="columns" format="integer" />
+        <attr name="material" format="boolean" />
+        <attr name="backwardsOrder" format="boolean" />
+        <!-- cp_strokeWidth renamed to avoid clashing with a dependency's strokeWidth attr -->
+        <attr name="cp_strokeWidth" format="integer" />
+        <attr name="strokeColor" format="color" />
+    </declare-styleable>
+</resources>

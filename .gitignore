@@ -1,0 +1,106 @@
+# 过滤本地隐私文件（内含本地 SDK 路径）
+local.properties
+
+# 过滤你之前写来测试的临时脚本和编译产物
+CheckProps.java
+CheckProps2.java
+CheckProps2.class
+
+# 过滤编译时生成的各种 build_*.txt 日志报告
+build_*.txt
+build_out*.txt
+crash.log
+
+# 过滤旧的备份文件和临时快照
+*.old
+SNAPSHOT-*.md
+
+# ====================================================================
+# 2. Android / Gradle 标准过滤规则 (防止几百MB的缓存传上网)
+# ====================================================================
+# 过滤所有模块下自动生成的 build 编译输出文件夹 (极其重要)
+build/
+**/build/
+
+# 过滤 Gradle 自己的本地缓存和虚拟环境
+.gradle/
+.kotlin/
+
+# 过滤 Android Studio 软件自带的皮肤、排版和本地历史记录
+.idea/
+*.iml
+*.iws
+
+# ====================================================================
+# 3. 系统与设备产生的临时垃圾
+# ====================================================================
+# Windows 系统自动生成的文件夹缩略图
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Mac 系统自动生成的隐藏索引文件
+.DS_Store
+
+# ====================================================================
+# 4. 必须保留的例外声明 (安全保险)
+# ====================================================================
+# 虽然过滤了 .gradle 缓存，但必须放行全小写的 gradle 自动化包装器目录
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+
+#built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Windows thumbnail db
+Thumbs.db
+
+# OSX files
+.DS_Store
+
+# Eclipse project files
+.classpath
+.project
+
+# Android Studio
+*.iml
+.idea
+#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
+.gradle
+build/
+
+#NDK
+obj/
+
+/*/out
+/*/*/build
+/*/*/production
+*.iws
+*.ipr
+*~
+*.swp
+
+# release key file
+release.jks
+signing.properties
+manifest.properties
+
+*.log
+
+google-services.json
+secrets.tar
