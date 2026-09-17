@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Green call button: a flat rounded-rectangle (not an ellipse) that reads as a
+  button in the dial pad's bottom action row, matching the native look better
+  than a stretched oval. Keep corners gentle so it stays "flat" rather than a
+  pill.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+    <solid android:color="#4CAF50"/>
+    <corners android:radius="22dp"/>
+</shape>

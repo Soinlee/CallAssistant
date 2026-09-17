@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 关于/开源许可/隐私/功能说明页：顶部 AppBarLayout(+Toolbar) + 下方 WebView。
+     AppBarLayout 的 fitsSystemWindows 让蓝色栏在 edge-to-edge 下贴顶，
+     WebView 位于栏下方，标题由宿主 Activity 的 setSupportActionBar + setTitle 控制。 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/settings_toolbar"/>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

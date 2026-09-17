@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 设置页根布局：顶部 AppBarLayout(+Toolbar) + 下方 fragment 容器。
+     采用固定纵向布局（不引入滚动联动 / CoordinatorLayout），
+     AppBarLayout 的 fitsSystemWindows 让蓝色栏在 edge-to-edge 下真正贴顶，
+     列表天然位于栏下方，底部导航栏 inset 由 SettingsActivity 在根布局统一处理。 -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settings_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/settings_toolbar"/>
+
+    <FrameLayout
+        android:id="@+id/settings_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

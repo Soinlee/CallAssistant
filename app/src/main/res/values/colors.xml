@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="blue_light">#ff33b5e5</color>
+    <color name="orange_dark">#ffff8800</color>
+    <color name="red_light">#ffff4444</color>
+    <color name="transparent">#00000000</color>
+    <color name="dark">#60000000</color>
+    <color name="white">#ffffffff</color>
+
+    <color name="pressed">#20000000</color>
+
+    <!-- Semantic colors for day (light) mode. Values in values-night/colors.xml
+         override these when the system is in dark mode, making the dial pad and
+         the call-log UI follow the system theme automatically. -->
+    <color name="dialpad_bg">#FFFFFF</color>
+    <color name="dialpad_key_bg">#F5F5F5</color>
+    <color name="dialpad_text">#212121</color>
+    <color name="dialpad_digit_text">#212121</color>
+    <color name="dialpad_divider">#E0E0E0</color>
+    <!-- Secondary letter sub-label colour on dial-pad keys (native look). -->
+    <color name="dialpad_letter_text">#757575</color>
+    <color name="history_bg">#FAFAFA</color>
+
+    <!-- Call-log type icon colors (native green/blue/red) -->
+    <color name="phone_call_incoming">#4CAF50</color>
+    <color name="phone_call_outgoing">#2196F3</color>
+    <color name="phone_call_missed">#F44336</color>
+
+    <!-- Material Design palette (500) colors used by rainbow array -->
+    <color name="tomato">#F44336</color>
+    <color name="tangerine">#FF9800</color>
+    <color name="banana">#FFEB3B</color>
+    <color name="basil">#4CAF50</color>
+    <color name="sage">#8BC34A</color>
+    <color name="peacock">#00BCD4</color>
+    <color name="blueberry">#2196F3</color>
+    <color name="lavender">#3F51B5</color>
+    <color name="grape">#9C27B0</color>
+    <color name="flamingo">#E91E63</color>
+    <color name="graphite">#607D8B</color>
+</resources>

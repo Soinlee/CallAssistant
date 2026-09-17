@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    应用图标前景层：白色超粗体数字「1」（代表有记录的通话）+ 右上角绿色小听筒。
+    - 数字用超粗圆帽描边，厚重感强，缩到 24dp 依然一眼可辨。
+    - 绿色仅作点缀（听筒），面积偏小，避免像微信/支付软件。
+    - 核心数字居中偏左，均落在自适应图标安全裁剪区内，边缘不裁切。
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 数字 1：斜头 -->
+    <path
+        android:pathData="M44,29 L58,37"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="18"
+        android:strokeLineCap="round" />
+
+    <!-- 数字 1：主竖线（超粗圆帽） -->
+    <path
+        android:pathData="M45,36 L45,74"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="22"
+        android:strokeLineCap="round" />
+
+    <!-- 右上角：绿色电话听筒（点缀，面积<20%） -->
+    <group
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:translateX="62"
+        android:translateY="20">
+        <path
+            android:fillColor="#00E676"
+            android:pathData="M6.62,10.79c1.44,2.83 3.76,5.14 6.59,6.59l2.2,-2.2c0.27,-0.27 0.67,-0.36 1.02,-0.24 1.12,0.37 2.33,0.57 3.57,0.57 0.55,0 1,0.45 1,1V20c0,0.55 -0.45,1 -1,1 -9.39,0 -17,-7.61 -17,-17 0,-0.55 0.45,-1 1,-1h3.5c0.55,0 1,0.45 1,1 0,1.25 0.2,2.45 0.57,3.57 0.11,0.35 0.03,0.74 -0.25,1.02l-2.2,2.2z" />
+    </group>
+</vector>

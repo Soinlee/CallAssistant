@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <PreferenceCategory
+        android:title="@string/color">
+        <org.xdty.preference.ColorPreference
+            android:defaultValue="@color/red_light"
+            android:key="color_report"
+            android:title="@string/color_report"
+            tools:colors="@array/rainbow"
+            tools:columns="5"/>
+        <org.xdty.preference.ColorPreference
+            android:defaultValue="@color/blue_light"
+            android:key="color_normal"
+            android:title="@string/color_normal"
+            tools:colors="@array/rainbow"
+            tools:columns="5"/>
+        <org.xdty.preference.ColorPreference
+            android:defaultValue="@color/orange_dark"
+            android:key="color_poi"
+            android:title="@string/color_poi"
+            tools:colors="@array/rainbow"
+            tools:columns="5"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="@string/float_window_key"
+        android:title="@string/float_window">
+
+        <PreferenceScreen
+            android:layout="@layout/preference"
+            android:title="@string/window_text_style">
+            <Preference
+                android:key="@string/window_text_size_key"
+                android:title="@string/window_text_size">
+            </Preference>
+
+            <Preference
+                android:key="@string/window_text_alignment_key"
+                android:title="@string/window_text_alignment">
+            </Preference>
+
+            <Preference
+                android:key="@string/window_text_padding_key"
+                android:title="@string/window_text_padding">
+            </Preference>
+
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="@string/window_text_color_key"
+                android:title="@string/window_text_color">
+            </SwitchPreference>
+        </PreferenceScreen>
+
+        <Preference
+            android:key="@string/window_height_key"
+            android:title="@string/window_height">
+        </Preference>
+
+        <Preference
+            android:key="@string/window_transparent_key"
+            android:title="@string/window_transparent">
+        </Preference>
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/window_trans_back_only_key"
+            android:title="@string/window_trans_back_only">
+        </SwitchPreference>
+
+        <PreferenceScreen
+            android:layout="@layout/preference"
+            android:title="@string/window_visibility">
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="@string/ignore_known_contact_key"
+                android:title="@string/ignore_known_contact">
+            </SwitchPreference>
+            <SwitchPreference
+                android:defaultValue="false"
+                android:dependency="@string/ignore_known_contact_key"
+                android:key="@string/contact_offline_key"
+                android:title="@string/contact_offline">
+            </SwitchPreference>
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="@string/display_on_outgoing_key"
+                android:title="@string/display_on_outgoing">
+            </SwitchPreference>
+            <SwitchPreference
+                android:defaultValue="false"
+                android:dependency="@string/display_on_outgoing_key"
+                android:key="@string/outgoing_window_position_key"
+                android:title="@string/outgoing_window_position">
+            </SwitchPreference>
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="@string/hide_when_off_hook_key"
+                android:title="@string/hide_when_off_hook">
+            </SwitchPreference>
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="@string/hide_when_touch_key"
+                android:title="@string/hide_when_touch">
+            </SwitchPreference>
+            <SwitchPreference
+                android:defaultValue="true"
+                android:key="@string/window_close_anim_key"
+                android:title="@string/window_close_anim">
+            </SwitchPreference>
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="@string/disable_move_key"
+                android:title="@string/disable_move">
+            </SwitchPreference>
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="@string/advanced_key"
+        android:title="@string/advanced">
+        <Preference
+            android:key="@string/ignore_regex_key"
+            android:title="@string/ignore_regex">
+        </Preference>
+        <PreferenceScreen
+            android:key="@string/mark_key"
+            android:layout="@layout/preference"
+            android:title="@string/mark">
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="@string/enable_marking_key"
+                android:summary="@string/enable_marking_summary"
+                android:title="@string/enable_marking">
+            </SwitchPreference>
+            <Preference
+                android:key="@string/offline_data_version_key"
+                android:title="@string/offline_data_version"/>
+        </PreferenceScreen>
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/ignore_battery_optimizations_key"
+            android:title="@string/ignore_battery_optimizations">
+        </SwitchPreference>
+
+        <PreferenceScreen
+            android:key="@string/custom_db_key"
+            android:layout="@layout/preference"
+            android:title="@string/custom_db">
+            <Preference
+                android:key="@string/custom_db_import_key"
+                android:title="@string/custom_db_import">
+            </Preference>
+            <Preference
+                android:key="@string/custom_db_status_key"
+                android:title="@string/custom_db_status">
+            </Preference>
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="@string/about_key"
+        android:title="@string/about">
+
+        <Preference
+            android:key="@string/version_key"
+            android:title="@string/version"/>
+
+        <Preference
+            android:key="project"
+            android:summary="@string/project_url"
+            android:title="@string/project_title">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/project_url"/>
+        </Preference>
+
+        <Preference
+            android:key="@string/developer_key"
+            android:summary="@string/developer_summary"
+            android:title="@string/developer"/>
+
+        <Preference
+            android:key="feature"
+            android:title="@string/feature_notice">
+            <intent android:action="com.github.soinlee.callassistant.action.VIEW_FEATURE"/>
+        </Preference>
+
+        <Preference
+            android:key="privacy"
+            android:title="@string/privacy_notice">
+            <intent android:action="com.github.soinlee.callassistant.action.VIEW_PRIVACY"/>
+        </Preference>
+
+        <Preference
+            android:key="license"
+            android:title="@string/license">
+            <intent android:action="com.github.soinlee.callassistant.action.VIEW_LICENSES"/>
+        </Preference>
+
+    </PreferenceCategory>
+</PreferenceScreen>

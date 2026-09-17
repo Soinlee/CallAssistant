@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="rainbow">
+        <item>@color/tomato</item>
+        <item>@color/red_light</item>
+        <item>@color/tangerine</item>
+        <item>@color/orange_dark</item>
+        <item>@color/banana</item>
+        <item>@color/basil</item>
+        <item>@color/sage</item>
+        <item>@color/blue_light</item>
+        <item>@color/peacock</item>
+        <item>@color/blueberry</item>
+        <item>@color/lavender</item>
+        <item>@color/grape</item>
+        <item>@color/flamingo</item>
+        <item>@color/graphite</item>
+    </array>
+    <string-array name="align_type">
+        <item>@string/align_left</item>
+        <item>@string/align_center</item>
+        <item>@string/align_right</item>
+    </string-array>
+    <string-array name="mark_type">
+        <item>@string/harassment</item>
+        <item>@string/fraud</item>
+        <item>@string/advertising</item>
+        <item>@string/express_delivery</item>
+        <item>@string/restaurant_deliver</item>
+    </string-array>
+
+    <string-array name="mark_type_source">
+        <item>@string/type_harassment</item>
+        <item>@string/type_fraud</item>
+        <item>@string/type_advertising</item>
+        <item>@string/type_express_delivery</item>
+        <item>@string/type_restaurant_deliver</item>
+    </string-array>
+    <!--
+        source_keys 必须与 source_values 一一对应（长度相等）。
+        已知 bug：此处曾含有多余的正数 key（0/1/2/8/1000），它们不属于
+        INumber.API_ID_*（全为负值），且会导致 Utils.sourceFromId 初始化
+        循环越界崩溃（ArrayIndexOutOfBoundsException length=8; index=8）。
+        故仅保留 8 个负 API ID。
+    -->
+    <integer-array name="source_keys">
+        <item>-2000</item>
+        <item>-1000</item>
+        <item>-200</item>
+        <item>-150</item>
+        <item>-100</item>
+        <item>-50</item>
+        <item>-2</item>
+        <item>-1</item>
+    </integer-array>
+    <array name="source_values">
+        <item>@string/source_custom</item>
+        <item>@string/source_special</item>
+        <item>@string/source_common</item>
+        <item>@string/source_caller</item>
+        <item>@string/source_marked</item>
+        <item>@string/source_mvno</item>
+        <item>@string/source_offline</item>
+        <item>@string/source_google</item>
+    </array>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Semantic colors for night (dark) mode: override the day values so the
+         dial pad and the call-log UI follow the system theme. -->
+    <color name="dialpad_bg">#121212</color>
+    <color name="dialpad_key_bg">#1F1F1F</color>
+    <color name="dialpad_text">#E0E0E0</color>
+    <color name="dialpad_digit_text">#FFFFFF</color>
+    <color name="dialpad_divider">#333333</color>
+    <!-- Secondary letter sub-label colour on dial-pad keys (native look). -->
+    <color name="dialpad_letter_text">#ABABAB</color>
+    <color name="history_bg">#121212</color>
+</resources>

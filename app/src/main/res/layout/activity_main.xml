@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.MainActivity">
+
+    <!--
+        顶部栏（原生拨号器风格）：搜索框 + 放大镜 + 三点溢出菜单并排一行，
+        直接顶到状态栏下方，无独立 Toolbar 空白条。
+        三点按钮用 PopupMenu 承载原有 menu_main 的菜单项。
+    -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:background="@color/dialpad_bg">
+
+        <EditText
+            android:id="@+id/search_input"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_search_field"
+            android:drawableStart="@drawable/ic_search_24dp"
+            android:drawablePadding="10dp"
+            android:ellipsize="start"
+            android:hint="@string/search_hint"
+            android:imeOptions="actionSearch"
+            android:importantForAutofill="no"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp"
+            android:textColor="@color/dialpad_text"
+            android:textColorHint="@color/dialpad_divider"/>
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/action_search"
+            android:src="@drawable/ic_search_24dp"/>
+
+        <ImageButton
+            android:id="@+id/overflow_menu"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/action_overflow"
+            android:src="@drawable/ic_overflow_24dp"
+            app:tint="@color/dialpad_text"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/content_main"/>
+
+</LinearLayout>

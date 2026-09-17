@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Transparent digit-key background with a circular system ripple, matching the
+  native Google Phone dial-pad look (no solid key background; the whole key is
+  a tappable ripple whose mask is an oval).
+-->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+        android:color="?attr/colorControlHighlight">
+    <item android:id="@android:id/mask">
+        <shape android:shape="oval">
+            <solid android:color="@android:color/white"/>
+        </shape>
+    </item>
+</ripple>

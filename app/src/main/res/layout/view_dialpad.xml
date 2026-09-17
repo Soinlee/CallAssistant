@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@color/dialpad_bg">
+
+    <!-- 数字显示区 -->
+    <TextView
+        android:id="@+id/dialpad_number"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/dialpad_digit_text"
+        android:textSize="32sp"
+        android:text=""
+        android:maxLines="1"
+        android:ellipsize="start"
+        android:hint="@string/dialpad_hint"
+        android:textColorHint="@color/dialpad_divider"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dialpad_divider"/>
+
+    <!-- 3x4 键盘 -->
+    <GridLayout
+        android:id="@+id/dialpad_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"/>
+</LinearLayout>
